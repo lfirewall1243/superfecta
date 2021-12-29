@@ -12,21 +12,21 @@ Version History
 *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***/
 class Klicktel_DE extends superfecta_base {
 
-    public $description = "http://www.klicktel.de - Usage of this module requires acceptance of Klicktel terms of service";
+    public $description = "http://www.11880.com - Usage of this module requires acceptance of Klicktel terms of service";
     public $version_requirement = "2.11";
 
     function get_caller_id($thenumber, $run_param=array()) {
         $caller_id = null;
-        $this->DebugPrint("Searching http://www.klicktel.de for $thenumber...");
+        $this->DebugPrint("Searching http://www.11880.com for $thenumber...");
 
         // url updated and working 2014-01-09
-        $url = "http://www.klicktel.de/rueckwaertssuche/". $thenumber;
+        $url = "http://www.11880.com/rueckwaertssuche/". $thenumber;
 
         // Patterns to search for
         $regexp = array(
 //          '/.html"><strong>(.*)<\/strong>/',    // old regex from ver 2.2.x not working
-//          '/<h4><a href="http:\/\/www.klicktel.de\/.*?">.*?\. (.*?)<\/a><\/h4>/',  // working 2014-01-09
-//            '/<h3 itemprop="name"><a href="http:\/\/www.klicktel.de\/.*?" target="_self">.*?\. (.*?)<\/a><\/h3>/',  
+//          '/<h4><a href="http:\/\/www.11880.com\/.*?">.*?\. (.*?)<\/a><\/h4>/',  // working 2014-01-09
+//            '/<h3 itemprop="name"><a href="http:\/\/www.11880.com\/.*?" target="_self">.*?\. (.*?)<\/a><\/h3>/',  
             '/<h1 itemprop="name" class="title">(.*?)<\/h1>/', // working 2016-04-01
         );
 
